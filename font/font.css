@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "BeVietnam";
+    src: url("BeVietnam-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BeVietnam-Bold";
+    src: url("BeVietnam-Bold.ttf") format("truetype");
+    font-display: swap;
+}
