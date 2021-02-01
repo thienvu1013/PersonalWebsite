@@ -5,6 +5,7 @@ body {
 	font-size: 24px;
 	color: #316252;
 	text-align: left;
+	overflow-x: hidden;
 }
 
 h1 {
@@ -47,12 +48,6 @@ ul {
 .column[data-width="1/3"] {width:33.33%;}
 .column[data-width="2/3"] {width:66.66%;}
 
-@media screen and (max-width:768px){
-	.column[data-width="1/2"] {width:100%;}
-	.column[data-width="1/3"] {width:33.33%;}
-	.column[data-width="2/3"] {width:66.66%;}
-}
-
 .container {
     box-sizing: border-box;
     min-height: 100%;
@@ -73,13 +68,28 @@ img {
 	margin: 0 auto;
 }
 
+@media screen and (max-width:900px){
+	body {font-size: 14px;}
+	h1 {font-size:26px;}
+	.frame {padding: 40px 20px; max-width: 425px;}
+	.row {margin: -20px -50px;}
+	.column {padding: 20px 50px;}
+	.column[data-width="1/2"] {width:100%;}
+	.column[data-width="1/3"] {width:100%;}
+	.column[data-width="2/3"] {width:100%;}
+	.icon {width: 150px;}
+}
+
 /* header */
 
 header {
 	position: fixed;
 	top: 0;
-	width: 100%;
+	left: 0;
+	width: 100vw;
 	background: #fff;
+	overflow: hidden;
+	z-index: 1;
 }
 
 #logo {
@@ -100,6 +110,12 @@ header {
 
 #navdrop {
 	display: none;
+}
+
+@media screen and (max-width:900px){
+	#logo {width: 40px;}
+	#nav {left: 70px; margin: 20px 0;}
+	#nav li {font-size: 14px; margin-right: 20px;}
 }
 
 /* parts */
@@ -123,4 +139,26 @@ header {
 #copy {
 	float: right;
 	font-size: 16px;
+}
+
+@media screen and (max-width:1024px){
+	#INTRO img {width: 95%;}
+}
+
+@media screen and (max-width:900px){
+	#HERO img {width: 80%;}
+	#INTRO img {width: 90%;}
+	#ABOUT > .frame > .row > .column:nth-child(1){order:2;}
+	#ABOUT > .frame > .row > .column:nth-child(2){order:1;}
+	#ABOUT > .frame > .row > .column:nth-child(3){order:3;}
+	#ABOUT > .frame > .row > .column:nth-child(4){order:4;}
+	#ABOUT > .frame > .row > .column:nth-child(4) h1 {text-align: center;}
+	.skills {text-align: center;}
+	.skills .column:first-child {padding-bottom: 0;}
+	.skills .column:last-child {padding-top: 0;}
+	.skills ul {margin: 0;}
+	#CONTACT {text-align: center;}
+	#CONTACT .frame {padding-bottom: 40px;}
+	#CONTACT > .frame > .row > .column:nth-child(1){order:2;}
+	#CONTACT > .frame > .row > .column:nth-child(2){order:1;}
 }
