@@ -29,4 +29,9 @@ jQuery(document).ready(function($){
 
 	});
 
+	$('.projects-carousel').flickity({
+		// options
+		contain: true,
+	  });
+
  });
